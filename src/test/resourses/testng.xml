@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Sphere">
+
+    <test name="UnitTests">
+        <groups>
+            <run>
+                <exclude name="general"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="net.cheltsov.sphere.entity.SphereTest"/>
+            <class name="net.cheltsov.sphere.action.SphereActionTest"/>
+            <class name="net.cheltsov.sphere.reader.SphereReaderTest"/>
+            <class name="net.cheltsov.sphere.parser.SphereParserTest"/>
+            <class name="net.cheltsov.sphere.creator.SphereCreatorTest"/>
+            <class name="net.cheltsov.sphere.manager.SphereObserverTest"/>
+            <class name="net.cheltsov.sphere.manager.SpherePropertiesTest"/>
+        </classes>
+    </test>
+
+    <test name="GeneralTest">
+        <groups>
+            <run>
+                <include name="general"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="net.cheltsov.sphere.reader.SphereReaderTest"/>
+            <class name="net.cheltsov.sphere.parser.SphereParserTest"/>
+            <class name="net.cheltsov.sphere.creator.SphereCreatorTest"/>
+        </classes>
+    </test>
+
+</suite>
